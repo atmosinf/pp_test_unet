@@ -18,3 +18,19 @@ To upload a new model:
 source venv/bin/activate
 python hf_upload.py <path_to_model> amoelgeogy/pp-test-unet
 ```
+
+## 🚀 Inference
+
+To run inference on a new image using the trained model:
+
+1. **Ensure you have the model**: If you haven't downloaded the `.pth` file, you can get it from the [Latest Model](#latest-model) link above.
+2. **Run the script**:
+```bash
+source venv/bin/activate
+python inference.py <path_to_image> --model_path unet.pth --output_path result.png
+```
+
+- **Arguments**:
+  - `image_path`: Path to your input image (e.g., `test_images/sample.jpg`).
+  - `--model_path`: (Optional) Path to your `.pth` file. Defaults to `unet.pth`.
+  - `--output_path`: (Optional) Path to save the visualization. Defaults to `output.png`.
